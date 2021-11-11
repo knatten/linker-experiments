@@ -1,6 +1,6 @@
-int f();
+int funky();
 
 int main()
 {
-    return f();
+    return funky();
 }

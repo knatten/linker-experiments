@@ -1,4 +1,4 @@
-int f()
+int funky()
 {
     return 1;
 }
