@@ -25,7 +25,7 @@ If I instead define `nonTrivial` as `inline NonTrivial nonTrivial` directly in `
 
 - The symobl is `u` (unique global symbol which the loader ensures the uniqueness of) in all of `base.o`, `libshared.so` and `main`. 
 - There is only one copy in memory, guaranteed by the loader, this is what we want!
-- The `__static_initialization_and_destruction_0` which calls the `NonTrivial` constructor is present both in `main` and `libshared.so`. Yet it's still only constructed once. I haven't had time to investigate how this is ensured.
+- The `__static_initialization_and_destruction_0` which calls the `NonTrivial` constructor is present both in `main` and `libshared.so`. Yet it's still only constructed once. There's a guard variable for `nonTrivial` which I assume is responsible for this.
 - Linking order of `-lbase` and `-lshared` does not matter.
 
 However, if I do `-fvisibility=hidden` when I build `base.o`:
