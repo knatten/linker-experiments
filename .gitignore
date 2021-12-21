@@ -4,3 +4,9 @@
 *.swp
 *.swo
 *.md.html
+
+#Visual Studio stuff
+.vs
+**/Debug
+**/Release
+*.user
