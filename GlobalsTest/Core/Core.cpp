@@ -4,6 +4,6 @@
 
 void coreFunction()
 {
-	//printGlobalAddresses();
+	printGlobalAddresses();
 	outerWrapper();
 }

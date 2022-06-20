@@ -1,0 +1,2 @@
+void hiddenFunction(){}
+void exportedFunction(){}

@@ -5,7 +5,7 @@
 
 int main()
 {
-	//printGlobalAddresses();
+	printGlobalAddresses();
 	outerWrapper();
 	coreFunction();
 }
